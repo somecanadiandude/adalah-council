@@ -1,6 +1,6 @@
 # Adalah Council — website
 
-Static single-page site for https://adalahcouncil.org. No build step; deploy the
+Static single-page site for https://somecanadiandude.github.io/adalah-council/. No build step; deploy the
 files as-is to GitHub Pages.
 
 ## Files
