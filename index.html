@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adalah Council — Principled Islamic Scholarship for Public Life</title>
+<meta name="description" content="Adalah Council is a nonprofit research and education organization bringing principled Islamic scholarship to contemporary ethical, legal, and social questions through research, public education, and guidance. Founded 2025, serving Northern Virginia and the broader public.">
+<link rel="canonical" href="https://adalahcouncil.org/">
+<meta name="theme-color" content="#23252b">
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Adalah Council">
+<meta property="og:url" content="https://adalahcouncil.org/">
+<meta property="og:title" content="Adalah Council — Principled Islamic Scholarship for Public Life">
+<meta property="og:description" content="Qualified religious scholarship applied to contemporary ethical, legal, and social questions through research, public education, and guidance.">
+<meta property="og:image" content="https://adalahcouncil.org/assets/adalah-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Adalah Council — principled Islamic scholarship for public life.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Adalah Council — Principled Islamic Scholarship for Public Life">
+<meta name="twitter:description" content="Qualified religious scholarship applied to contemporary ethical, legal, and social questions through research, public education, and guidance.">
+<meta name="twitter:image" content="https://adalahcouncil.org/assets/adalah-og.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Adalah Council, Inc.",
+  "alternateName": "Adalah Council",
+  "url": "https://adalahcouncil.org/",
+  "logo": "https://adalahcouncil.org/assets/icon-512.png",
+  "image": "https://adalahcouncil.org/assets/adalah-og.png",
+  "email": "president@adalahcouncil.org",
+  "foundingDate": "2025",
+  "description": "A nonprofit research and education organization bringing principled Islamic scholarship to contemporary ethical, legal, and social questions through research, public education, and guidance.",
+  "nonprofitStatus": "Nonprofit501c3",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Falls Church",
+    "addressRegion": "VA",
+    "addressCountry": "US"
+  },
+  "areaServed": "Northern Virginia and the broader public",
+  "founder": { "@type": "Person", "name": "Farhan Siddiqi", "jobTitle": "President" },
+  "knowsAbout": ["Islamic scholarship", "Ethics", "Religious law", "Public education"]
+}
+</script>
+
+<style>
+  :root{
+    --ink:#23252b; --ink-2:#585b63;
+    --paper:#f2f1ec; --cream:#e3e2dd; --white:#faf9f5;
+    --accent:#2c4159; --accent-dk:#223247;
+    --line:rgba(35,37,43,.14); --line-2:rgba(35,37,43,.24);
+    --maxw:1080px;
+    --pad-x:clamp(1.25rem,4vw,2rem);
+    --sect-y:clamp(3.75rem,8vw,6.25rem);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Lora",Georgia,"Times New Roman",serif;
+    font-size:clamp(1.03rem,.55rem + .95vw,1.14rem);
+    line-height:1.72; -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .container{max-width:var(--maxw); margin-inline:auto; padding-inline:var(--pad-x)}
+  h1,h2,h3{font-weight:600; line-height:1.14; letter-spacing:-.012em; margin:0}
+  p{margin:0 0 1.05em}
+  a{color:var(--accent); text-underline-offset:3px; text-decoration-thickness:1px}
+  a:hover{color:var(--accent-dk)}
+  img{max-width:100%; height:auto; display:block}
+
+  /* ---- skip link ---- */
+  .skip{position:absolute; left:-999px; top:0; z-index:100;
+    background:var(--ink); color:#fff; padding:.6rem 1rem; border-radius:0 0 6px 0;
+    font-family:"Poppins",sans-serif; font-size:.9rem}
+  .skip:focus{left:0; color:#fff}
+
+  :where(:focus-visible){outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
+
+  /* ---- buttons ---- */
+  .btn{display:inline-flex; align-items:center; justify-content:center;
+    font-family:"Poppins",sans-serif; font-weight:500; font-size:.94rem;
+    letter-spacing:.005em; line-height:1; padding:.82em 1.35em; border-radius:3px;
+    border:1px solid transparent; cursor:pointer; transition:background-color .18s ease,
+    border-color .18s ease, color .18s ease; text-decoration:none; white-space:nowrap}
+  .btn-primary{background:var(--accent); color:#fff}
+  .btn-primary:hover{background:var(--accent-dk); color:#fff}
+  .btn-secondary{background:transparent; color:var(--ink); border-color:var(--line-2)}
+  .btn-secondary:hover{border-color:var(--ink); color:var(--ink); background:rgba(35,37,43,.03)}
+  .btn-light{background:var(--paper); color:var(--ink)}
+  .btn-light:hover{background:#fff; color:var(--ink)}
+  .btn-sm{padding:.62em 1.05em; font-size:.9rem}
+
+  /* ---- header ---- */
+  .site-header{position:sticky; top:0; z-index:50;
+    background:rgba(242,241,236,.88); backdrop-filter:saturate(1.1) blur(8px);
+    border-bottom:1px solid var(--line)}
+  .bar{display:flex; align-items:center; justify-content:space-between;
+    gap:.75rem 1.25rem; flex-wrap:wrap; padding-block:.7rem}
+  .brand{display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--ink)}
+  .brand:hover{color:var(--ink)}
+  .brand-mark{width:26px; height:26px; color:var(--accent); flex:none}
+  .brand-name{font-family:"Poppins",sans-serif; font-weight:600; font-size:1.12rem;
+    letter-spacing:-.01em}
+  .nav{display:flex; align-items:center; gap:clamp(.9rem,2.5vw,1.6rem)}
+  .nav a:not(.btn){font-family:"Poppins",sans-serif; font-weight:500; font-size:.95rem;
+    color:var(--ink); text-decoration:none; padding:.2rem 0; border-bottom:1.5px solid transparent}
+  .nav a:not(.btn):hover{color:var(--accent); border-bottom-color:var(--accent)}
+
+  /* ---- section shells ---- */
+  section{scroll-margin-top:92px}
+  .band{padding-block:var(--sect-y)}
+  .band--cream{background:var(--cream)}
+  .band--paper{background:var(--paper)}
+  .sec-head{text-align:center; margin-bottom:clamp(2rem,4vw,2.9rem)}
+  .sec-head h2{font-size:clamp(1.65rem,1rem + 2.2vw,2.3rem); text-wrap:balance}
+  .rule{width:46px; height:2px; background:var(--accent); margin:1.05rem auto 0; border:0}
+
+  /* ---- hero ---- */
+  .hero{background:var(--cream); text-align:center;
+    padding-block:clamp(2.75rem,6vw,4.75rem) clamp(3.25rem,7vw,5.25rem)}
+  .hero-logo{width:min(76vw,372px); margin:0 auto clamp(1.4rem,3vw,2rem)}
+  .hero h1{font-size:clamp(2.1rem,1.15rem + 3.3vw,3.35rem); max-width:22ch;
+    margin:0 auto .85rem; text-wrap:balance}
+  .hero-lede{font-size:clamp(1.08rem,.8rem + .8vw,1.24rem); color:var(--ink-2);
+    max-width:60ch; margin:0 auto 1.9rem; text-wrap:pretty}
+  .hero-actions{display:flex; gap:.85rem; justify-content:center; flex-wrap:wrap}
+
+  /* ---- prose (about) ---- */
+  .prose{max-width:63ch; margin-inline:auto}
+  .prose p{color:#31333a}
+  .term{display:flex; align-items:baseline; gap:.85rem; justify-content:center;
+    flex-wrap:wrap; text-align:center; margin-bottom:1.9rem}
+  .term .ar{font-family:"Amiri",serif; font-size:2.5rem; line-height:1; color:var(--ink)}
+  .term .gloss{font-style:italic; color:var(--ink-2); font-size:1.05rem}
+  .term .gloss b{font-style:normal; font-weight:600; color:var(--ink)}
+
+  .principles{display:grid; grid-template-columns:repeat(3,1fr);
+    margin-top:clamp(2.2rem,4vw,3rem); border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line)}
+  .principle{padding:1.3rem 1.25rem; text-align:center; font-size:1.02rem; color:var(--ink)}
+  .principle + .principle{border-left:1px solid var(--line)}
+
+  /* ---- programs ---- */
+  .prog-intro{max-width:60ch; margin:0 auto clamp(2rem,4vw,2.8rem); text-align:center;
+    color:var(--ink-2)}
+  .grid2{display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(1rem,2vw,1.4rem)}
+  .card{background:var(--white); border:1px solid var(--line); border-radius:4px;
+    padding:clamp(1.4rem,2.4vw,1.85rem)}
+  .card-tick{width:26px; height:2px; background:var(--accent); margin-bottom:1rem; border:0}
+  .card h3{font-size:1.24rem; margin-bottom:.55rem}
+  .card p{font-size:1rem; line-height:1.62; color:var(--ink-2); margin:0}
+
+  /* ---- leadership + contact ---- */
+  .two-up{display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4rem);
+    max-width:920px; margin-inline:auto}
+  .block h3{font-size:1.02rem; font-family:"Poppins",sans-serif; font-weight:600;
+    letter-spacing:.01em; margin-bottom:1rem; color:var(--ink)}
+  .lead-name{font-size:1.35rem; font-weight:600; margin-bottom:.15rem}
+  .lead-role{font-family:"Poppins",sans-serif; font-size:.92rem; color:var(--ink-2);
+    letter-spacing:.01em}
+  .contact-list{list-style:none; margin:0; padding:0; font-size:1.06rem; line-height:1.5}
+  .contact-list li{margin-bottom:.85rem; color:var(--ink)}
+  .contact-list li:last-child{margin-bottom:0}
+
+  /* ---- support band ---- */
+  .support{background:var(--ink); color:var(--paper); text-align:center;
+    padding-block:clamp(3.25rem,7vw,5rem)}
+  .support h2{font-size:clamp(1.6rem,1rem + 2vw,2.2rem); color:#fff; max-width:20ch;
+    margin:0 auto .9rem}
+  .support p{color:#c7cad1; max-width:56ch; margin:0 auto 1.1rem}
+  .support .legal{font-size:.92rem; color:#9ea2ac; max-width:52ch; margin:0 auto 1.85rem}
+  .support .btn-light{font-size:1rem; padding:.9em 1.7em}
+
+  /* ---- footer ---- */
+  .site-footer{background:var(--paper); border-top:1px solid var(--line-2);
+    padding-block:clamp(2.5rem,5vw,3.4rem)}
+  .foot-top{display:flex; align-items:center; justify-content:space-between;
+    gap:1.25rem 2rem; flex-wrap:wrap; padding-bottom:1.4rem; margin-bottom:1.4rem;
+    border-bottom:1px solid var(--line)}
+  .foot-nav{display:flex; gap:1.4rem; flex-wrap:wrap}
+  .foot-nav a{font-family:"Poppins",sans-serif; font-weight:500; font-size:.94rem;
+    color:var(--ink); text-decoration:none}
+  .foot-nav a:hover{color:var(--accent)}
+  .foot-grid{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem 2rem}
+  .foot-contact{font-size:.95rem; color:var(--ink-2); line-height:1.6}
+  .foot-contact a{color:var(--ink-2)}
+  .foot-contact a:hover{color:var(--accent)}
+  .foot-legal{font-size:.9rem; color:var(--ink-2); line-height:1.6; max-width:46ch}
+  .foot-copy{font-family:"Poppins",sans-serif; font-size:.85rem; color:var(--ink-2);
+    margin-top:1.6rem}
+
+  /* ---- one quiet entrance ---- */
+  @media (prefers-reduced-motion:no-preference){
+    .fade{opacity:0; transform:translateY(9px); animation:rise .65s ease .05s forwards}
+    .fade.d1{animation-delay:.13s}
+    .fade.d2{animation-delay:.21s}
+    .fade.d3{animation-delay:.29s}
+    @keyframes rise{to{opacity:1; transform:none}}
+  }
+
+  /* ---- responsive ---- */
+  @media (max-width:720px){
+    .grid2{grid-template-columns:1fr}
+    .two-up{grid-template-columns:1fr; gap:2.5rem}
+    .principles{grid-template-columns:1fr}
+    .principle + .principle{border-left:0; border-top:1px solid var(--line)}
+  }
+  @media (max-width:560px){
+    .bar{justify-content:center}
+    .brand{width:100%; justify-content:center}
+    .nav{width:100%; justify-content:center}
+    .foot-top{justify-content:center; text-align:center}
+  }
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="bar container">
+    <a class="brand" href="#top" aria-label="Adalah Council — home">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true" fill="none"
+           stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="25" y1="32" x2="75" y2="32"/>
+        <line x1="50" y1="32" x2="50" y2="79"/>
+        <path d="M50 79 L40 90 M50 79 L60 90 M36 90 L64 90"/>
+        <path d="M25 32 L16 49 M25 32 L34 49 M16 49 L20 56 L30 56 L34 49"/>
+        <path d="M75 32 L66 49 M75 32 L84 49 M66 49 L70 56 L80 56 L84 49"/>
+        <circle cx="50" cy="28" r="3.4" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="brand-name">Adalah Council</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a class="btn btn-primary btn-sm" href="https://www.zeffy.com/en-US/donation-form/donate-to-educate-our-community">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+      <img class="hero-logo fade" src="/assets/adalah-logo.png" width="435" height="235"
+           alt="Adalah Council — two classical columns flanking a set of scales" fetchpriority="high">
+      <h1 id="hero-title" class="fade d1">Principled Islamic scholarship for public life.</h1>
+      <p class="hero-lede fade d2">Adalah Council brings qualified religious scholarship to contemporary ethical, legal, and social questions through research, public education, and institutional guidance.</p>
+      <div class="hero-actions fade d3">
+        <a class="btn btn-primary" href="#programs">Explore our work</a>
+        <a class="btn btn-secondary" href="https://www.zeffy.com/en-US/donation-form/donate-to-educate-our-community">Support Adalah Council</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="band band--paper" aria-labelledby="about-title">
+    <div class="container">
+      <div class="sec-head">
+        <h2 id="about-title">About Adalah Council</h2>
+        <hr class="rule">
+      </div>
+      <div class="prose">
+        <p class="term">
+          <span class="ar" lang="ar" dir="rtl">عَدَالَة</span>
+          <span class="gloss"><b>ʿadālah</b> — justice, balance, equity</span>
+        </p>
+        <p>Adalah Council is a nonprofit research and education organization founded in 2025 to bring qualified religious scholarship to the questions that shape public life. Its name — <em>ʿadālah</em>, the Arabic word for justice and balance — reflects a conviction that sound guidance rests on both fidelity to the Islamic intellectual tradition and careful attention to the realities of the modern world.</p>
+        <p>The Council serves individuals, families, and institutions seeking thoughtful, principled answers to contemporary ethical, legal, and social questions. It pursues this through research and publication, public education, and advisory guidance grounded in scholarship rather than personality or partisanship.</p>
+        <p>We approach these questions with intellectual seriousness and independence. Adalah Council welcomes a range of perspectives, resists political alignment, and holds that religious scholarship serves the public best when it is rigorous, transparent, and accountable to the tradition it represents.</p>
+      </div>
+      <div class="principles">
+        <div class="principle">Rooted in the Islamic scholarly tradition</div>
+        <div class="principle">Attentive to contemporary life</div>
+        <div class="principle">Independent of partisanship</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section id="programs" class="band band--cream" aria-labelledby="programs-title">
+    <div class="container">
+      <div class="sec-head">
+        <h2 id="programs-title">Programs &amp; activities</h2>
+        <hr class="rule">
+      </div>
+      <p class="prog-intro">Our work spans four areas. As lectures, publications, statements, and initiatives are developed, they will be announced within these areas.</p>
+      <div class="grid2">
+
+        <article class="card">
+          <hr class="card-tick">
+          <h3>Educational Programming</h3>
+          <p>Public lectures, seminars, and workshops that make serious scholarship accessible, alongside educational resources for continued study.</p>
+          <!-- To list a lecture or event later, add it here, e.g.:
+          <ul class="items"><li><strong>Title</strong> — short note, date</li></ul> -->
+        </article>
+
+        <article class="card">
+          <hr class="card-tick">
+          <h3>Research &amp; Publications</h3>
+          <p>Articles, essays, and applied research on the ethical and legal questions facing Muslims today, written for both scholarly and public audiences.</p>
+          <!-- To list a publication later, add it here. -->
+        </article>
+
+        <article class="card">
+          <hr class="card-tick">
+          <h3>Advisory Initiatives</h3>
+          <p>Research-informed guidance and consultation for individuals, families, and institutions navigating complex contemporary questions.</p>
+          <!-- To list an initiative later, add it here. -->
+        </article>
+
+        <article class="card">
+          <hr class="card-tick">
+          <h3>Community Engagement</h3>
+          <p>Public programming and dialogue that connect scholarship to the concerns of Northern Virginia's Muslim community and the broader public.</p>
+          <!-- To list a statement or event later, add it here. -->
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP & CONTACT -->
+  <section id="contact" class="band band--paper" aria-labelledby="lead-title">
+    <div class="container">
+      <div class="sec-head">
+        <h2 id="lead-title">Leadership &amp; contact</h2>
+        <hr class="rule">
+      </div>
+      <div class="two-up">
+        <div class="block">
+          <h3>Leadership</h3>
+          <p class="lead-name">Farhan Siddiqi</p>
+          <p class="lead-role">President</p>
+          <!-- Add a short professional biography above, and additional
+               leadership or board members as separate name/role blocks, when ready. -->
+        </div>
+        <div class="block">
+          <h3>Contact</h3>
+          <ul class="contact-list">
+            <li><a href="mailto:president@adalahcouncil.org">president@adalahcouncil.org</a></li>
+            <li>Falls Church, Virginia</li>
+            <li>Serving Northern Virginia and the broader public</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section class="support" aria-labelledby="support-title">
+    <div class="container">
+      <h2 id="support-title">Support principled scholarship</h2>
+      <p>Help us produce principled Islamic research, public education, and guidance addressing the questions facing our communities and institutions.</p>
+      <p class="legal">Adalah Council, Inc. is a 501(c)(3) public charity. Contributions are tax-deductible to the extent permitted by law.</p>
+      <a class="btn btn-light" href="https://www.zeffy.com/en-US/donation-form/donate-to-educate-our-community">Donate</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-top">
+      <a class="brand" href="#top" aria-label="Adalah Council — home">
+        <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true" fill="none"
+             stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="25" y1="32" x2="75" y2="32"/>
+          <line x1="50" y1="32" x2="50" y2="79"/>
+          <path d="M50 79 L40 90 M50 79 L60 90 M36 90 L64 90"/>
+          <path d="M25 32 L16 49 M25 32 L34 49 M16 49 L20 56 L30 56 L34 49"/>
+          <path d="M75 32 L66 49 M75 32 L84 49 M66 49 L70 56 L80 56 L84 49"/>
+          <circle cx="50" cy="28" r="3.4" fill="currentColor" stroke="none"/>
+        </svg>
+        <span class="brand-name">Adalah Council</span>
+      </a>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-educate-our-community">Donate</a>
+      </nav>
+    </div>
+    <div class="foot-grid">
+      <p class="foot-contact">
+        <a href="mailto:president@adalahcouncil.org">president@adalahcouncil.org</a><br>
+        Falls Church, Virginia<br>
+        Serving Northern Virginia and the broader public
+      </p>
+      <p class="foot-legal">Adalah Council, Inc. is a 501(c)(3) public charity. Contributions are tax-deductible to the extent permitted by law.</p>
+    </div>
+    <p class="foot-copy">© 2025 Adalah Council, Inc.</p>
+  </div>
+</footer>
+
+</body>
+</html>
