@@ -1,0 +1,79 @@
+media:
+  input: assets/uploads
+  output: /assets/uploads
+
+content:
+  - name: articles
+    label: Articles
+    type: collection
+    path: _articles
+    format: yaml-frontmatter
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: deck
+        label: Summary (one or two sentences shown under the title and in search results)
+        type: text
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: type
+        label: Type
+        type: select
+        options:
+          values: [Essay, Research, Statement, Announcement]
+      - name: author
+        label: Author
+        type: string
+        default: Adalah Council
+      - name: published
+        label: Published (turn off to keep it hidden as a draft)
+        type: boolean
+        default: true
+      - name: layout
+        type: string
+        default: article
+        hidden: true
+      - name: body
+        label: Article text
+        type: rich-text
+
+  - name: videos
+    label: Videos
+    type: file
+    path: _data/videos.yml
+    format: yaml
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: speaker
+        label: Speaker
+        type: string
+      - name: date
+        label: Year or date recorded
+        type: string
+      - name: duration
+        label: Length (for example 42 min)
+        type: string
+      - name: topic
+        label: Topic (for example Law, Ethics, Education)
+        type: string
+      - name: youtube
+        label: YouTube link (paste the full link)
+        type: string
+      - name: description
+        label: Description
+        type: text

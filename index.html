@@ -9,11 +9,11 @@
 <meta name="theme-color" content="#23252b">
 
 <!-- Favicons -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
 <!-- Open Graph / Twitter -->
 <meta property="og:type" content="website">
@@ -167,6 +167,9 @@
   .card-tick{width:26px; height:2px; background:var(--accent); margin-bottom:1rem; border:0}
   .card h3{font-size:1.24rem; margin-bottom:.55rem}
   .card p{font-size:1rem; line-height:1.62; color:var(--ink-2); margin:0}
+  .card-link{font-family:"Poppins",sans-serif; font-size:.9rem; font-weight:500; display:inline-block;
+    margin-top:1rem; color:var(--accent); text-decoration:none; border-bottom:1.5px solid var(--line-2); padding-bottom:1px}
+  .card-link:hover{border-bottom-color:var(--accent)}
 
   /* ---- leadership + contact ---- */
   .two-up{display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4rem);
@@ -251,6 +254,8 @@
     <nav class="nav" aria-label="Primary">
       <a href="#about">About</a>
       <a href="#programs">Programs</a>
+      <a href="videos.html">Media</a>
+      <a href="writing.html">Writing</a>
       <a class="btn btn-primary btn-sm" href="https://www.zeffy.com/en-US/donation-form/donate-to-educate-our-community">Donate</a>
     </nav>
   </div>
@@ -261,7 +266,7 @@
   <!-- HERO -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="container">
-      <img class="hero-logo fade" src="/assets/favicon-16.png" width="435" height="235"
+      <img class="hero-logo fade" src="assets/adalah-logo.png" width="435" height="235"
            alt="Adalah Council — two classical columns flanking a set of scales" fetchpriority="high">
       <h1 id="hero-title" class="fade d1">Principled Islamic scholarship for public life.</h1>
       <p class="hero-lede fade d2">Adalah Council brings qualified religious scholarship to contemporary ethical, legal, and social questions through research, public education, and institutional guidance.</p>
@@ -310,6 +315,7 @@
           <hr class="card-tick">
           <h3>Educational Programming</h3>
           <p>Public lectures, seminars, and workshops that make serious scholarship accessible, alongside educational resources for continued study.</p>
+          <a class="card-link" href="videos.html">View lectures</a>
           <!-- To list a lecture or event later, add it here, e.g.:
           <ul class="items"><li><strong>Title</strong> — short note, date</li></ul> -->
         </article>
@@ -318,6 +324,7 @@
           <hr class="card-tick">
           <h3>Research &amp; Publications</h3>
           <p>Articles, essays, and applied research on the ethical and legal questions facing Muslims today, written for both scholarly and public audiences.</p>
+          <a class="card-link" href="writing.html">Read our writing</a>
           <!-- To list a publication later, add it here. -->
         </article>
 
@@ -396,6 +403,8 @@
       <nav class="foot-nav" aria-label="Footer">
         <a href="#about">About</a>
         <a href="#programs">Programs</a>
+        <a href="videos.html">Media</a>
+        <a href="writing.html">Writing</a>
         <a href="https://www.zeffy.com/en-US/donation-form/donate-to-educate-our-community">Donate</a>
       </nav>
     </div>

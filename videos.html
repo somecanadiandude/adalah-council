@@ -1,0 +1,372 @@
+---
+title: Media
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lectures &amp; Talks — Adalah Council</title>
+<meta name="description" content="Recorded lectures, seminars, and talks from Adalah Council — serious Islamic scholarship on contemporary ethical, legal, and social questions.">
+<link rel="canonical" href="https://adalahcouncil.org/videos.html">
+<meta name="theme-color" content="#23252b">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#23252b; --ink-2:#585b63; --paper:#f2f1ec; --cream:#e3e2dd; --white:#faf9f5;
+    --accent:#2c4159; --accent-dk:#223247; --player:#1b1d23;
+    --line:rgba(35,37,43,.14); --line-2:rgba(35,37,43,.24);
+    --maxw:1200px; --pad-x:clamp(1.25rem,4vw,2rem);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Lora",Georgia,serif; font-size:clamp(1.02rem,.6rem + .8vw,1.1rem);
+    line-height:1.7; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility}
+  .container{max-width:var(--maxw); margin-inline:auto; padding-inline:var(--pad-x)}
+  h1,h2,h3{font-weight:600; line-height:1.15; letter-spacing:-.012em; margin:0}
+  a{color:var(--accent); text-underline-offset:3px}
+  a:hover{color:var(--accent-dk)}
+  img{max-width:100%; height:auto; display:block}
+  .skip{position:absolute; left:-999px; top:0; z-index:100; background:var(--ink); color:#fff;
+    padding:.6rem 1rem; border-radius:0 0 6px 0; font-family:"Poppins",sans-serif; font-size:.9rem}
+  .skip:focus{left:0; color:#fff}
+  :where(:focus-visible){outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
+
+  /* buttons */
+  .btn{display:inline-flex; align-items:center; justify-content:center; font-family:"Poppins",sans-serif;
+    font-weight:500; font-size:.94rem; padding:.82em 1.35em; border-radius:3px; border:1px solid transparent;
+    cursor:pointer; transition:background-color .18s,border-color .18s,color .18s; text-decoration:none; white-space:nowrap}
+  .btn-primary{background:var(--accent); color:#fff}
+  .btn-primary:hover{background:var(--accent-dk); color:#fff}
+  .btn-sm{padding:.62em 1.05em; font-size:.9rem}
+
+  /* header */
+  .site-header{position:sticky; top:0; z-index:50; background:rgba(242,241,236,.9);
+    backdrop-filter:saturate(1.1) blur(8px); border-bottom:1px solid var(--line)}
+  .bar{display:flex; align-items:center; justify-content:space-between; gap:.75rem 1.25rem;
+    flex-wrap:wrap; padding-block:.7rem}
+  .brand{display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--ink)}
+  .brand-mark{width:26px; height:26px; color:var(--accent); flex:none}
+  .brand-name{font-family:"Poppins",sans-serif; font-weight:600; font-size:1.12rem; letter-spacing:-.01em}
+  .nav{display:flex; align-items:center; gap:clamp(.85rem,2.2vw,1.5rem)}
+  .nav a:not(.btn){font-family:"Poppins",sans-serif; font-weight:500; font-size:.95rem; color:var(--ink);
+    text-decoration:none; padding:.2rem 0; border-bottom:1.5px solid transparent}
+  .nav a:not(.btn):hover{color:var(--accent); border-bottom-color:var(--accent)}
+  .nav a[aria-current="page"]{color:var(--accent); border-bottom-color:var(--accent)}
+
+  /* intro */
+  .page-intro{padding-block:clamp(2.25rem,5vw,3.4rem) clamp(1.4rem,3vw,2rem)}
+  .kicker{font-family:"Poppins",sans-serif; font-size:.82rem; letter-spacing:.02em; color:var(--accent);
+    margin:0 0 .55rem}
+  .page-intro h1{font-size:clamp(1.9rem,1.1rem + 2.6vw,2.7rem); max-width:20ch}
+  .page-intro p{color:var(--ink-2); max-width:60ch; margin:.85rem 0 0}
+  .filters{display:flex; gap:.5rem; flex-wrap:wrap; margin-top:1.6rem}
+  .filter{font-family:"Poppins",sans-serif; font-size:.86rem; padding:.42rem .9rem; border-radius:999px;
+    border:1px solid var(--line-2); background:transparent; color:var(--ink); cursor:pointer;
+    transition:background-color .16s,color .16s,border-color .16s}
+  .filter:hover{border-color:var(--ink)}
+  .filter[aria-pressed="true"]{background:var(--ink); color:#fff; border-color:var(--ink)}
+
+  /* layout */
+  .media{display:grid; grid-template-columns:minmax(0,1fr) 360px; gap:clamp(1.5rem,3vw,2.5rem);
+    padding-bottom:clamp(3.5rem,7vw,5.5rem); align-items:start}
+
+  /* player */
+  .player{position:relative; aspect-ratio:16/9; background:var(--player); border-radius:9px;
+    overflow:hidden; border:1px solid rgba(0,0,0,.15)}
+  .player iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+  .poster{position:absolute; inset:0; border:0; background:transparent; cursor:pointer; color:inherit;
+    display:grid; place-items:center; width:100%; padding:0}
+  .poster::before{content:""; position:absolute; inset:0;
+    background:radial-gradient(120% 100% at 50% 0%, #2b2f39 0%, #1b1d23 70%)}
+  .poster .mark{position:absolute; top:18px; left:20px; width:30px; height:30px; color:rgba(227,226,221,.5)}
+  .play{position:relative; width:76px; height:76px; border-radius:50%; background:var(--accent);
+    display:grid; place-items:center; transition:transform .18s, background-color .18s;
+    box-shadow:0 8px 30px rgba(0,0,0,.35)}
+  .poster:hover .play{transform:scale(1.06); background:#35507089}
+  .poster:hover .play{background:#3a577a}
+  .play svg{width:30px; height:30px; margin-left:5px; fill:#fff}
+  .poster .p-title{position:absolute; left:22px; right:22px; bottom:20px; text-align:left;
+    font-family:"Poppins",sans-serif; font-weight:500; color:#f3f2ee; font-size:1.05rem;
+    text-shadow:0 1px 12px rgba(0,0,0,.5)}
+  .note{position:absolute; left:50%; bottom:16px; transform:translateX(-50%); font-family:"Poppins",sans-serif;
+    font-size:.8rem; color:#e8e6df; background:rgba(0,0,0,.5); padding:.4rem .7rem; border-radius:6px;
+    opacity:0; transition:opacity .2s; pointer-events:none; white-space:nowrap}
+  .note.show{opacity:1}
+
+  /* featured meta */
+  .v-meta{padding-top:1.4rem}
+  .v-topic{display:inline-block; font-family:"Poppins",sans-serif; font-size:.72rem; letter-spacing:.04em;
+    text-transform:uppercase; color:var(--accent); border:1px solid var(--line-2); border-radius:4px;
+    padding:.22rem .5rem; margin-bottom:.85rem}
+  .v-meta h2{font-size:clamp(1.4rem,1rem + 1.4vw,1.9rem); max-width:26ch}
+  .v-byline{font-family:"Poppins",sans-serif; font-weight:500; margin-top:.6rem; color:var(--ink)}
+  .v-sub{display:flex; align-items:center; gap:.85rem; margin-top:.3rem; color:var(--ink-2);
+    font-size:.92rem}
+  .v-sub .sep{width:1px; height:1em; background:var(--line-2)}
+  .v-desc{margin-top:1.1rem; max-width:64ch; color:#31333a}
+
+  /* playlist */
+  .aside-head{font-family:"Poppins",sans-serif; font-size:.8rem; letter-spacing:.03em; color:var(--ink-2);
+    text-transform:uppercase; margin:0 0 .9rem; display:flex; justify-content:space-between; align-items:baseline}
+  .aside-head .count{color:var(--accent)}
+  .playlist{display:flex; flex-direction:column; gap:.4rem; max-height:600px; overflow:auto;
+    padding-right:.3rem; scrollbar-width:thin}
+  .pl-item{display:grid; grid-template-columns:132px minmax(0,1fr); gap:.8rem; align-items:center;
+    padding:.5rem; border:1px solid transparent; border-radius:9px; background:transparent; cursor:pointer;
+    text-align:left; width:100%; font:inherit; color:inherit; transition:background-color .15s,border-color .15s}
+  .pl-item:hover{background:rgba(35,37,43,.045)}
+  .pl-item[aria-current="true"]{background:var(--white); border-color:var(--line);
+    box-shadow:inset 3px 0 0 var(--accent)}
+  .pl-thumb{position:relative; width:132px; aspect-ratio:16/9; border-radius:5px; overflow:hidden;
+    background:radial-gradient(120% 120% at 50% 0%, #2b2f39, #1b1d23); flex:none}
+  .pl-thumb .mk{position:absolute; inset:0; margin:auto; width:22px; height:22px; color:rgba(227,226,221,.45)}
+  .pl-thumb .pin{position:absolute; inset:0; display:grid; place-items:center}
+  .pl-thumb .pin svg{width:16px; height:16px; fill:rgba(243,242,238,.92); margin-left:2px}
+  .pl-dur{position:absolute; right:5px; bottom:5px; font-family:"Poppins",sans-serif; font-size:.68rem;
+    color:#fff; background:rgba(0,0,0,.72); padding:.08rem .32rem; border-radius:3px; letter-spacing:.02em}
+  .pl-body{min-width:0}
+  .pl-title{font-family:"Poppins",sans-serif; font-weight:500; font-size:.95rem; line-height:1.3;
+    color:var(--ink); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
+  .pl-item[aria-current="true"] .pl-title{color:var(--accent)}
+  .pl-speaker{font-size:.82rem; color:var(--ink-2); margin-top:.2rem}
+  .pl-empty{color:var(--ink-2); font-size:.92rem; padding:1rem .5rem}
+
+  /* footer */
+  .site-footer{background:var(--paper); border-top:1px solid var(--line-2); padding-block:2.4rem}
+  .foot{display:flex; align-items:center; justify-content:space-between; gap:1rem 2rem; flex-wrap:wrap}
+  .foot-nav{display:flex; gap:1.3rem; flex-wrap:wrap}
+  .foot-nav a{font-family:"Poppins",sans-serif; font-weight:500; font-size:.92rem; color:var(--ink); text-decoration:none}
+  .foot-nav a:hover{color:var(--accent)}
+  .foot-copy{font-family:"Poppins",sans-serif; font-size:.85rem; color:var(--ink-2)}
+
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{transition:none !important}}
+  @media (max-width:900px){
+    .media{grid-template-columns:1fr}
+    .playlist{max-height:none; overflow:visible}
+    .aside{border-top:1px solid var(--line); padding-top:1.6rem}
+  }
+  @media (max-width:560px){
+    .bar{justify-content:center} .brand{width:100%; justify-content:center} .nav{width:100%; justify-content:center}
+    .foot{justify-content:center; text-align:center}
+    .pl-item{grid-template-columns:108px minmax(0,1fr)} .pl-thumb{width:108px}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="bar container">
+    <a class="brand" href="index.html" aria-label="Adalah Council — home">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor"
+           stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="25" y1="32" x2="75" y2="32"/><line x1="50" y1="32" x2="50" y2="79"/>
+        <path d="M50 79 L40 90 M50 79 L60 90 M36 90 L64 90"/>
+        <path d="M25 32 L16 49 M25 32 L34 49 M16 49 L20 56 L30 56 L34 49"/>
+        <path d="M75 32 L66 49 M75 32 L84 49 M66 49 L70 56 L80 56 L84 49"/>
+        <circle cx="50" cy="28" r="3.4" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="brand-name">Adalah Council</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#programs">Programs</a>
+      <a href="videos.html" aria-current="page">Media</a>
+      <a href="writing.html">Writing</a>
+      <a class="btn btn-primary btn-sm" href="https://www.zeffy.com/en-US/donation-form/donate-to-educate-our-community">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-intro container" aria-labelledby="ptitle">
+    <p class="kicker">Media</p>
+    <h1 id="ptitle">Lectures &amp; talks</h1>
+    <p>Recorded lectures, seminars, and conversations bringing serious scholarship to the ethical, legal, and social questions facing our communities.</p>
+    <div class="filters" role="group" aria-label="Filter by topic" id="filters"></div>
+  </section>
+
+  <div class="media container">
+    <div class="video-main">
+      <div class="player">
+        <div id="playerSlot" aria-live="polite">
+          <button class="poster" id="poster" type="button" aria-label="Play video">
+            <svg class="mark" viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor"
+                 stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="25" y1="32" x2="75" y2="32"/><line x1="50" y1="32" x2="50" y2="79"/>
+              <path d="M50 79 L40 90 M50 79 L60 90 M36 90 L64 90"/>
+              <path d="M25 32 L16 49 M25 32 L34 49 M16 49 L20 56 L30 56 L34 49"/>
+              <path d="M75 32 L66 49 M75 32 L84 49 M66 49 L70 56 L80 56 L84 49"/>
+              <circle cx="50" cy="28" r="3.4" fill="currentColor" stroke="none"/>
+            </svg>
+            <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="p-title" id="posterTitle"></span>
+            <span class="note" id="note">Add a YouTube link to this entry to enable playback.</span>
+          </button>
+        </div>
+      </div>
+      <div class="v-meta">
+        <span class="v-topic" id="vTopic"></span>
+        <h2 id="vTitle"></h2>
+        <div class="v-byline" id="vBy"></div>
+        <div class="v-sub"><span id="vDate"></span><span class="sep"></span><span id="vDur"></span></div>
+        <p class="v-desc" id="vDesc"></p>
+      </div>
+    </div>
+
+    <aside class="aside video-aside" aria-label="Video playlist">
+      <p class="aside-head"><span>In this series</span><span class="count" id="plCount"></span></p>
+      <div class="playlist" id="playlist"></div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="foot container">
+    <a class="brand" href="index.html" aria-label="Adalah Council — home">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor"
+           stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="25" y1="32" x2="75" y2="32"/><line x1="50" y1="32" x2="50" y2="79"/>
+        <path d="M50 79 L40 90 M50 79 L60 90 M36 90 L64 90"/>
+        <path d="M25 32 L16 49 M25 32 L34 49 M16 49 L20 56 L30 56 L34 49"/>
+        <path d="M75 32 L66 49 M75 32 L84 49 M66 49 L70 56 L80 56 L84 49"/>
+        <circle cx="50" cy="28" r="3.4" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="brand-name">Adalah Council</span>
+    </a>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="index.html#about">About</a>
+      <a href="index.html#programs">Programs</a>
+      <a href="videos.html">Media</a>
+      <a href="writing.html">Writing</a>
+      <a href="https://www.zeffy.com/en-US/donation-form/donate-to-educate-our-community">Donate</a>
+    </nav>
+    <p class="foot-copy">© 2025 Adalah Council, Inc.</p>
+  </div>
+</footer>
+
+<script>
+/* Videos come from the "Videos" list in the editor (file: _data/videos.yml). */
+const VIDEOS = {{ site.data.videos | jsonify }};
+
+function ytId(u){
+  if(!u) return '';
+  var m = String(u).match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([A-Za-z0-9_-]{11})/);
+  if(m) return m[1];
+  return /^[A-Za-z0-9_-]{11}$/.test(String(u).trim()) ? String(u).trim() : '';
+}
+VIDEOS.forEach(function(v){ v.youtubeId = ytId(v.youtube); });
+
+if(!VIDEOS.length){
+  document.querySelector('.media').innerHTML = '<p style="color:var(--ink-2)">New talks will appear here.</p>';
+  throw new Error('no videos yet');
+}
+
+const PLAY_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
+const MARK = document.querySelector('.poster .mark').outerHTML;
+
+const els = {
+  filters: document.getElementById('filters'),
+  playlist: document.getElementById('playlist'),
+  slot: document.getElementById('playerSlot'),
+  posterTitle: document.getElementById('posterTitle'),
+  note: document.getElementById('note'),
+  topic: document.getElementById('vTopic'), title: document.getElementById('vTitle'),
+  by: document.getElementById('vBy'), date: document.getElementById('vDate'),
+  dur: document.getElementById('vDur'), desc: document.getElementById('vDesc'),
+  count: document.getElementById('plCount'),
+};
+
+let current = 0, filter = 'All';
+const topics = ['All', ...Array.from(new Set(VIDEOS.map(v => v.topic)))];
+
+function visibleList(){
+  return VIDEOS.map((v,i)=>({v,i})).filter(o => filter==='All' || o.v.topic===filter);
+}
+
+function renderFilters(){
+  els.filters.innerHTML = '';
+  topics.forEach(t => {
+    const b = document.createElement('button');
+    b.className='filter'; b.textContent=t; b.type='button';
+    b.setAttribute('aria-pressed', String(t===filter));
+    b.addEventListener('click', ()=>{
+      filter=t; const list=visibleList();
+      if(list.length && !list.some(o=>o.i===current)) current=list[0].i;
+      renderFilters(); renderPlaylist(); renderFeatured();
+    });
+    els.filters.appendChild(b);
+  });
+}
+
+function thumb(v){
+  return '<span class="pl-thumb">'+
+    '<svg class="mk" viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><line x1="25" y1="32" x2="75" y2="32"/><line x1="50" y1="32" x2="50" y2="79"/><path d="M50 79 L40 90 M50 79 L60 90 M36 90 L64 90"/><path d="M25 32 L16 49 M25 32 L34 49 M16 49 L20 56 L30 56 L34 49"/><path d="M75 32 L66 49 M75 32 L84 49 M66 49 L70 56 L80 56 L84 49"/><circle cx="50" cy="28" r="3.4" fill="currentColor" stroke="none"/></svg>'+
+    '<span class="pin">'+PLAY_ICON+'</span>'+
+    '<span class="pl-dur">'+v.duration+'</span></span>';
+}
+
+function renderPlaylist(){
+  const list = visibleList();
+  els.count.textContent = list.length + (list.length===1?' talk':' talks');
+  els.playlist.innerHTML = '';
+  if(!list.length){ els.playlist.innerHTML='<p class="pl-empty">No talks in this topic yet.</p>'; return; }
+  list.forEach(({v,i}) => {
+    const b=document.createElement('button');
+    b.className='pl-item'; b.type='button';
+    b.setAttribute('aria-current', String(i===current));
+    b.innerHTML = thumb(v) + '<span class="pl-body"><span class="pl-title">'+v.title+
+      '</span><span class="pl-speaker">'+v.speaker+'</span></span>';
+    b.addEventListener('click', ()=>{ current=i; renderPlaylist(); renderFeatured(); resetPlayer();
+      document.querySelector('.player').scrollIntoView({block:'nearest'}); });
+    els.playlist.appendChild(b);
+  });
+}
+
+function renderFeatured(){
+  const v = VIDEOS[current];
+  els.topic.textContent=v.topic; els.title.textContent=v.title; els.by.textContent=v.speaker;
+  els.date.textContent='Recorded '+v.date; els.dur.textContent=v.duration; els.desc.textContent=v.description;
+  els.posterTitle.textContent=v.title;
+}
+
+function resetPlayer(){
+  els.slot.innerHTML = ''+
+    '<button class="poster" id="poster" type="button" aria-label="Play video">'+MARK+
+    '<span class="play">'+PLAY_ICON+'</span>'+
+    '<span class="p-title" id="posterTitle"></span>'+
+    '<span class="note" id="note">Add a YouTube link to this entry to enable playback.</span>'+
+    '</button>';
+  els.posterTitle = document.getElementById('posterTitle');
+  els.note = document.getElementById('note');
+  els.posterTitle.textContent = VIDEOS[current].title;
+  bindPoster();
+}
+
+function bindPoster(){
+  const poster = document.getElementById('poster');
+  poster.addEventListener('click', ()=>{
+    const v = VIDEOS[current];
+    if(v.youtubeId){
+      const f=document.createElement('iframe');
+      f.src='https://www.youtube-nocookie.com/embed/'+v.youtubeId+'?autoplay=1&rel=0';
+      f.title=v.title; f.allow='accelerated-motion; autoplay; encrypted-media; picture-in-picture';
+      f.allowFullscreen=true; els.slot.innerHTML=''; els.slot.appendChild(f);
+    } else {
+      els.note.classList.add('show');
+      setTimeout(()=>els.note.classList.remove('show'), 2600);
+    }
+  });
+}
+
+renderFilters(); renderPlaylist(); renderFeatured(); bindPoster();
+</script>
+</body>
+</html>

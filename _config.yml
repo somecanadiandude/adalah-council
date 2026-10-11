@@ -1,0 +1,22 @@
+# Adalah Council site settings (Jekyll builds this automatically on GitHub Pages)
+title: Adalah Council
+description: Principled Islamic scholarship for public life.
+url: "https://adalahcouncil.org"   # the public address of the site
+baseurl: ""                        # leave empty for adalahcouncil.org
+
+future: true                       # never hide an article because of its date
+
+collections:
+  articles:
+    output: true                   # each article becomes its own page
+    permalink: /writing/:name/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+
+exclude:
+  - README.md
+  - GUIDE.md
+  - .pages.yml
